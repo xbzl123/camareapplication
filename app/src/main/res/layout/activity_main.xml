@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.example.camareapplication.model.MapModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="位置"></TextView>
+
+        <TextView
+            android:id="@+id/snapshoot_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始拍照"
+            android:onClick="@{()->model.takePhoto()}"
+            >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/captrue_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/recorder_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始录像"
+            android:onClick="@{()->model.recodeVideo()}"
+            ></TextView>
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/captrue_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:text="开始摄像头捕获"
+            >
+        </androidx.appcompat.widget.SwitchCompat>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/recevice_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="开始摄像头接收"
+                >
+            </androidx.appcompat.widget.SwitchCompat>
+        <VideoView
+            android:id="@+id/capture_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <SurfaceView
+            android:id="@+id/surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+        </SurfaceView>
+        <TextureView
+            android:id="@+id/textureview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+        </TextureView>
+
+    </LinearLayout>
+</layout>

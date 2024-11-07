@@ -1,0 +1,12 @@
+{
+  "buildFiles": [
+    "H:\\android-ndk\\21.1.6352462\\build\\cmake\\android.toolchain.cmake",
+    "H:\\android-ndk\\21.1.6352462\\build\\cmake\\platforms.cmake",
+    "G:\\workspace1\\CamareApplication\\app\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"G:\\workspace1\\CamareApplication\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" clean"
+  ],
+  "buildTargetsCommand": "C:\\Users\\Administrator\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"G:\\workspace1\\CamareApplication\\app\\.cxx\\cmake\\debug\\armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {}
+}
