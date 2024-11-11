@@ -70,9 +70,9 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding mainBinding;
 
     // Used to load the 'native-lib' library on application startup.
-    static {
-        System.loadLibrary("h264-encode");
-    }
+//    static {
+//        System.loadLibrary("h264-encode");
+//    }
 
     private LocationUtils instance;
     private SensorManager serviceManager;
@@ -543,8 +543,13 @@ public class MainActivity extends AppCompatActivity {
 
     private BufferedOutputStream createfile(String path){
         File file = new File(path);
+
         BufferedOutputStream outputStream = null;
         try {
+            if (!file.getParentFile().exists()) {
+                file.getParentFile().mkdirs();
+                file.createNewFile();
+            }
             outputStream = new BufferedOutputStream(new FileOutputStream(file));
         } catch (Exception e){
             e.printStackTrace();

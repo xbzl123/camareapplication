@@ -2,11 +2,6 @@ package com.example.camareapplication;
 
 import com.example.camareapplication.Generic.Coordinate;
 import com.example.camareapplication.Generic.MyPosition;
-import com.rokejits.android.tool.utils.JSONUtils;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +33,7 @@ public class Test {
 //        customObservable.postMessage("BBB","你好，这是觀察者模式");
         customObservable.postMessage("BBB",52013140);
 
-        MyPosition<Integer,Double,Float> myPosition = new MyPosition();
+        MyPosition<Integer,Double,Float> myPosition = new MyPosition<Integer,Double,Float>();
         myPosition.setY(520.0);
         myPosition.setZ(250.0f);
         System.out.println("myPosition the result is "+myPosition.getX());

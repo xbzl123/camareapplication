@@ -8,7 +8,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 
-import com.example.camareapplication.yuv2h264.YUVHandler;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
